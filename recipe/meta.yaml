@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ camelName }}-{{ version }}.tar.gz
-  md5: 2301acc0ecbab0633d4c9b883d50ee5e
+  sha256: e28f902f2f0a1603ea95ebe21dff311ef09be3d0f0ef29a3e44a932729564385
 
 build:
 
