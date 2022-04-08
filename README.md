@@ -1,7 +1,7 @@
 About pypdf2
 ============
 
-Home: http://mstamy2.github.com/PyPDF2
+Home: http://py-pdf.github.io/PyPDF2/
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pypdf2-feedstoc
 
 Summary: A utility to read and write PDFs with Python
 
-Development: https://github.com/mstamy2/PyPDF2/
+Development: https://github.com/py-pdf/PyPDF2
 
-Documentation: http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html
+Documentation: https://pypdf2.readthedocs.io/
 
 Current build status
 ====================
