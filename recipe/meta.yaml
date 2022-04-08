@@ -28,6 +28,7 @@ test:
 about:
   home: http://py-pdf.github.io/PyPDF2/
   license: BSD-3-Clause  # unsure about this license...to be rechecked
+  license_file: LICENSE
   license_family: BSD
   summary: A utility to read and write PDFs with Python
   doc_url: https://pypdf2.readthedocs.io/
