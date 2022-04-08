@@ -1,5 +1,5 @@
 {% set name = "PyPDF2" %}
-{% set version = "1.26.0" %}
+{% set version = "1.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,33 +7,32 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e28f902f2f0a1603ea95ebe21dff311ef09be3d0f0ef29a3e44a932729564385
+  sha256: 20fb6795712e9d1ea73ae61a3e3c4c9580c051a31a6b9961dfb55445c6ce5d6a
 
 build:
   noarch: python
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
 
 test:
   imports:
     - PyPDF2
 
 about:
-  home: http://mstamy2.github.com/PyPDF2
-  license: BSD-3-Clause
-  # LICENSE not in MANIFEST.in - see https://github.com/mstamy2/PyPDF2/pull/288
+  home: http://py-pdf.github.io/PyPDF2/
+  license: BSD-3-Clause  # unsure about this license...to be rechecked
   license_file: LICENSE
   license_family: BSD
-  summary: 'A utility to read and write PDFs with Python'
-  doc_url: http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html
-  dev_url: https://github.com/mstamy2/PyPDF2/
+  summary: A utility to read and write PDFs with Python
+  doc_url: https://pypdf2.readthedocs.io/
+  dev_url: https://github.com/py-pdf/PyPDF2
 
 extra:
   recipe-maintainers:
