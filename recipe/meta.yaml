@@ -12,28 +12,26 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
 
 test:
   imports:
     - PyPDF2
 
 about:
-  home: http://mstamy2.github.com/PyPDF2
-  license: BSD-3-Clause
-  # LICENSE not in MANIFEST.in - see https://github.com/mstamy2/PyPDF2/pull/288
-  license_file: LICENSE
+  home: http://py-pdf.github.io/PyPDF2/
+  license: BSD-3-Clause  # unsure about this license...to be rechecked
   license_family: BSD
   summary: A utility to read and write PDFs with Python
-  doc_url: http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html
-  dev_url: https://github.com/mstamy2/PyPDF2/
+  doc_url: https://pypdf2.readthedocs.io/
+  dev_url: https://github.com/py-pdf/PyPDF2
 
 extra:
   recipe-maintainers:
