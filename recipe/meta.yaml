@@ -1,5 +1,5 @@
 {% set name = "PyPDF2" %}
-{% set version = "1.28.4" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04ce42cd05707881fedbca3164744511805fe8c30618ae4cfb2b940e3368d5ad
+  sha256: 6c2c686cbdad1fa6d42a8cafb5d2f033d1798dd00e13e8d7691b510c567efa34
 
 build:
   noarch: python
