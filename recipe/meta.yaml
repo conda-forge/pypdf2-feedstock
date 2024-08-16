@@ -10,7 +10,7 @@ source:
   sha256: f1b0df8cd686d2ed069088b903ec65fb0f53e9c7837adc8139eccfbb7eb9141f
 
 build:
-  skip: true  # [py2k]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
