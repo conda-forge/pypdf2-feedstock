@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - typing_extensions >=3.10.0.0  # [py<310]
-    - dataclasses  # [py<37]
+    - typing_extensions >=3.10.0.0 
+    - dataclasses  
 
 test:
   imports:
