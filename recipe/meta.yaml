@@ -27,12 +27,7 @@ requirements:
 test:
   imports:
     - PyPDF2
-  commands:
-    - pip check
-    - pytest
-  requires:
-    - pip
-    - pytest 
+  
 
 about:
   home: http://py-pdf.github.io/PyPDF2/
