@@ -1,5 +1,5 @@
 {% set name = "PyPDF2" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyPDF2-{{ version }}.tar.gz
-  sha256: 340dcc7fd62ad3dc4a132df13617e9c33f1c4c15379846cb95ef14aec9f106f9
+  sha256: a74408f69ba6271f71b9352ef4ed03dc53a31aa404d29b5d31f53bfecfee1440
 
 build:
   noarch: python
@@ -21,13 +21,13 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - typing_extensions >=3.10.0.0 
+    - typing_extensions >=3.10.0.0
     - dataclasses
 
 test:
   imports:
     - PyPDF2
-  
+
 
 about:
   home: http://py-pdf.github.io/PyPDF2/
