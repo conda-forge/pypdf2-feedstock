@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyPDF2-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyPDF2-{{ version }}.tar.gz
   sha256: a74408f69ba6271f71b9352ef4ed03dc53a31aa404d29b5d31f53bfecfee1440
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - typing_extensions >=3.10.0.0
     - dataclasses
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - PyPDF2
 
