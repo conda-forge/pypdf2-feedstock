@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: PyPDF2
+  version: 3.0.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/PyPDF2-${{ version }}.tar.gz
+  sha256: a74408f69ba6271f71b9352ef4ed03dc53a31aa404d29b5d31f53bfecfee1440
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - flit-core >=3.2,<4
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - typing_extensions >=3.10.0.0
+    - dataclasses
+
+tests:
+  - python:
+      imports:
+        - PyPDF2
+      python_version: ${{ python_min }}.*
+about:
+  summary: A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: http://py-pdf.github.io/PyPDF2/
+  repository: https://github.com/py-pdf/PyPDF2
+  documentation: https://pypdf2.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - julian-belina
+    - pmlandwehr
+    - carlodri
